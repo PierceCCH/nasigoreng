@@ -44,9 +44,12 @@ export const HomePage = () => {
             <IntroBlock className="introduction">
                 <img src = {randy}/>
                 <div className="intro-text">
-                    <p>
-                        Hello welcome to UCLA SSA my name is Matthew and I will be your host for today's stand up comedy show where we will see Zinc do a backflip off this 3 meter tall stool.
-                    </p>
+                   <div className="divider" />
+                      <h4>About us!</h4>
+                      <p>
+                      The Singapore Students Association is a student-led organisation that aims to act as a community for Singaporean students at UCLA. We hope to serve as a familiar society that provides support and comfort for students of similar backgrounds thousands of miles away from home. The organisation also hopes to educate students not of Singaporean origin of the culture through sharing and communication between our members and the rest of the UCLA community. We welcome anyone who has lived/studied in Singapore, has Singaporean friends, or who feels connected to Singaporean culture in any way!
+                      </p>
+                  <div className="divider" />
                 </div>
             </IntroBlock>
         </div>
@@ -60,7 +63,6 @@ export const HomePage = () => {
                     <h5>Your home to all things Singaporean at UCLA!</h5>
                 </div>
             </div>
-            <div className="divider" />
             <div className="row mt-4 directions">
                 <IntroBlock heading="New to UCLA" icon={squidImg}>
                     <p>Get oriented with our <Link to="/guide">Sotong Guide</Link> for incoming freshmen and <a href="/auth/facebook">sign up</a> for
