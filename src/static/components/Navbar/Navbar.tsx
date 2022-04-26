@@ -33,11 +33,11 @@ export const Navbar = ({
           </div>
         </Link>
         <Nav className="ml-auto pr-1 pr-md-0 tabs">
-          <LinkToAbout />
+          {/* <LinkToAbout />
           <LinkToEvents />
           <LinkToSponsorships />
           <LinkToNewsletters />
-          <LinkToJoin />
+          <LinkToJoin /> */}
           <SotongGuideDropdown userData = {userData} />
           <Socials />
           <NavItem>{userIconOrSignIn}</NavItem>

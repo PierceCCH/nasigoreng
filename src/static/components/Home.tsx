@@ -41,8 +41,13 @@ export const HomePage = () => {
             <div className="row">
                 <div className="hero" style={backgroundImgStyle}></div>
             </div>
-            <IntroBlock className="introduction">
-                <img src = {randy}/>
+            <div className="row mt-3">
+                <div className="col title">
+                    <h2>UCLA</h2>
+                    <h1>Singaporean Students Association</h1>
+                    <h5>Your home to all things Singaporean at UCLA!</h5>
+                </div>
+            </div>
                 <div className="intro-text">
                    <div className="divider" />
                       <h4>About us!</h4>
@@ -51,22 +56,10 @@ export const HomePage = () => {
                       </p>
                   <div className="divider" />
                 </div>
-            </IntroBlock>
-        </div>
-    );
-};
-
-            {/* <div className="row mt-3">
-                <div className="col title">
-                    <h2>UCLA</h2>
-                    <h1>Singapore Students Association</h1>
-                    <h5>Your home to all things Singaporean at UCLA!</h5>
-                </div>
-            </div>
             <div className="row mt-4 directions">
-                <IntroBlock heading="New to UCLA" icon={squidImg}>
+                <IntroBlock heading="New to UCLA?" icon={squidImg} className="introduction">
                     <p>Get oriented with our <Link to="/guide">Sotong Guide</Link> for incoming freshmen and <a href="/auth/facebook">sign up</a> for
-                    an account to get access to our resources!</p>
+                        an account to get access to our resources!</p>
                     <p>
                     Be sure to
                     join our <a target="_blank" href="https://discord.gg/cEk7YuPZ">Discord channel</a> and follow
@@ -85,4 +78,7 @@ export const HomePage = () => {
                     We're always looking for sponsorship and career opportunities! You can reach us <a href="mailto:exco@uclassa.org">via email</a> or
                     simply drop any of us a message on Facebook!
                 </IntroBlock>
-            </div> */}
+            </div>
+        </div>
+    );
+};
