@@ -28,7 +28,7 @@ export const getSotongGuide = ((req: Request, res: Response) => {
                 return "<h" + tokens[idx].hLevel + " id=" + toc.slugify((<any>tokens[idx + 1]).content) + ">";
             };
           });
-        request.get(Config.SOTONG_GUIDE_URL)
+        request.get(Config.SOTONG_GUIDE_VISA_URL)
         .then((data) => {
             const mdPageDom = cheerio.load(data);
             const md = mdPageDom(".markdown-body").html();
@@ -38,7 +38,7 @@ export const getSotongGuide = ((req: Request, res: Response) => {
                 md: md,
                 toc: mdRenderer.render(toc(md).content),
                 html: mdRenderer.render(md),
-                editLink: req.user ? Config.SOTONG_GUIDE_URL : undefined, // TODO: make this more secure... somehow
+                editLink: req.user ? Config.SOTONG_GUIDE_VISA_URL : undefined, // TODO: make this more secure... somehow
                 fetchTime: dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT")
             };
             cachedGuide = response;

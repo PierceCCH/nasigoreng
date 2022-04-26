@@ -24,8 +24,12 @@ import { IUser, IUserModel } from "./models/User";
 
 const apiRoutes = express.Router();
 
-apiRoutes.get("/guide", getSotongGuide);
-apiRoutes.get("/setup", authenticationRequired, firstTimeSetupHandler);
+apiRoutes.get("/Visa", getSotongGuide);
+apiRoutes.get("/PreDeparture", getSotongGuide);
+apiRoutes.get("/OnCampus", getSotongGuide);
+apiRoutes.get("/Settling", getSotongGuide);
+apiRoutes.get("/Academic", getSotongGuide);
+apiRoutes.get("/General", authenticationRequired, firstTimeSetupHandler);
 
 apiRoutes.get("/users/current", getCurrentUser);
 apiRoutes.get("/users", adminRequired, listUsers);
