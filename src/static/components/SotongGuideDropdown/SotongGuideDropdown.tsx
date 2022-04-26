@@ -16,28 +16,33 @@ function SotongGuideDropdown(userData) {
         </DropdownToggle>
         <DropdownMenu right>
             <DropdownItem>
-                <Link to="/guide">
+                <Link to="/Visa">
                 Visa Information
                 </Link>
             </DropdownItem>
             <DropdownItem>
-                <Link to="/arbitraryPage">
-                Pre-departure preparation
+                <Link to="/PreDeparture">
+                Pre-departure Preparation
                 </Link>
             </DropdownItem>
             <DropdownItem>
-                <Link to="/arbitraryPage">
-                Settling in
+                <Link to="/OnCampus">
+                On-Campus Living
                 </Link>
             </DropdownItem>
             <DropdownItem>
-                <Link to="/arbitraryPage">
-                On-campus living
+                <Link to="/Settling">
+                Settling Down
                 </Link>
             </DropdownItem>
             <DropdownItem>
-                <Link to="/arbitraryPage">
-                Academic help
+                <Link to="/Academic">
+                Academics
+                </Link>
+            </DropdownItem>
+            <DropdownItem>
+                <Link to="/General">
+                General Information
                 </Link>
             </DropdownItem>
             {userData && (
