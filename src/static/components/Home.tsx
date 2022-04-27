@@ -8,6 +8,7 @@ import finance from "../assets/finance.jpg";
 import partnerships from "../assets/partnerships.jpg";
 import partnerships2 from "../assets/partnerships2.jpg";
 import socialmedia from "../assets/socialmedia.jpg";
+import events from "../assets/events.jpg";
 import oldManImg from "../assets/oldman.png";
 import phoneImg from "../assets/phone.png";
 import randy from "../assets/img.png";
@@ -94,7 +95,7 @@ export const HomePage = () => {
                             </ExcoBlock>
                             <ExcoBlock heading="Vice President/Events" icon={vicepresident}>
                                 <h7>Natalie Quah</h7>
-                                <p>CO '22/23 | Enviro Science, Conservation Bio</p>
+                                <p>CO '22/23 | Environmental Science</p>
                             </ExcoBlock>
                             <ExcoBlock heading="Finance" icon={finance}>
                                 <h7>Hazim Fathul Rahman</h7>
@@ -104,7 +105,7 @@ export const HomePage = () => {
                     <div className="row mt-4 directions">
                             <ExcoBlock heading="Partnerships" icon={partnerships} className="introduction">
                                 <h7>David Grueber</h7>
-                                <p>CO '24 | Mathematics, Economics</p>
+                                <p>CO '24 | Mathematics/Economics</p>
                             </ExcoBlock>
                             <ExcoBlock heading="Careers" icon={partnerships2}>
                                 <h7>Jerry Ding</h7>
@@ -115,6 +116,12 @@ export const HomePage = () => {
                                 <p>CO '25 | Computer Science and Engineering</p>
                             </ExcoBlock>
                         </div>
+                    <div className="row mt-4 directions">
+                        <ExcoBlock heading="Events" icon={events} className="introduction">
+                            <h7>Tania Tan</h7>
+                            <p>CO '25 | Psychology</p>
+                        </ExcoBlock>
+                    </div>
                   <div className="divider" />
                 </div>
             <div className="row mt-4 directions">
