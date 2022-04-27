@@ -1,4 +1,4 @@
-import express from "express";
+import express, { request, response } from "express";
 import passport from "passport";
 import {
   adminRequired,
@@ -13,7 +13,7 @@ import {
   deleteUser,
   listPCPMentors
 } from "./controllers/userController";
-import { getSotongGuide } from "./controllers/contentController";
+import { getAcademicsGuide, getDepartureGuide, getGeneralUrl, getOncampusGuide, getSettlingGuide, getSotongGuide, getVisaGuide } from "./controllers/contentController";
 import {
   listTestBank,
   createSignedUpload,
@@ -21,10 +21,18 @@ import {
   getOneTestbankFile
 } from "./controllers/testBankController";
 import { IUser, IUserModel } from "./models/User";
+import Config from "./config";
 
 const apiRoutes = express.Router();
 
 apiRoutes.get("/guide", getSotongGuide);
+apiRoutes.get("/Visa", getVisaGuide);
+apiRoutes.get("/PreDeparture", getDepartureGuide);
+apiRoutes.get("/OnCampus", getOncampusGuide);
+apiRoutes.get("/Settling", getSettlingGuide);
+apiRoutes.get("/Academics", getAcademicsGuide);
+apiRoutes.get("/General", getGeneralUrl);
+
 apiRoutes.get("/setup", authenticationRequired, firstTimeSetupHandler);
 
 apiRoutes.get("/users/current", getCurrentUser);

@@ -6,6 +6,12 @@ import { IUser, User } from "../models/User";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer";
 import SotongGuidePage from "./components/SotongGuide";
+import VisaGuidePage from "./components/SotongGuideDropdown/VisaGuide";
+import PredeparturePage from "./components/SotongGuideDropdown/PredepartureGuide";
+import OnCampusGuidePage from "./components/SotongGuideDropdown/OnCampusGuide";
+import AcademicsGuidePage from "./components/SotongGuideDropdown/AcademicsGuide";
+import SettlingInPage from "./components/SotongGuideDropdown/SettlingInGuide";
+import GeneralGuidePage from "./components/SotongGuideDropdown/GeneralGuide";
 import PrivacyPolicyPage from "./components/PrivacyPolicy";
 import UserViewPage from "./components/UserView";
 import TestBank from "./components/TestBank";
@@ -73,8 +79,28 @@ class App extends React.Component<{}, Readonly<IAppState>> {
                   path="/guide"
                 />
                 <Route
-                  render={() => <ArbitraryPage appState={this.state} />}
-                  path="/arbitraryPage"
+                  render={() => <VisaGuidePage appState={this.state} />}
+                  path="/Visa"
+                />
+                <Route
+                  render={() => <SettlingInPage appState={this.state} />}
+                  path="/SettlingIn"
+                />
+                <Route
+                  render={() => <PredeparturePage appState={this.state} />}
+                  path="/Predeparture"
+                />
+                <Route
+                  render={() => <OnCampusGuidePage appState={this.state} />}
+                  path="/OnCampus"
+                />
+                <Route
+                  render={() => <AcademicsGuidePage appState={this.state} />}
+                  path="/Academics"
+                />
+                <Route
+                  render={() => <GeneralGuidePage appState={this.state} />}
+                  path="/General"
                 />
                 <Route
                   render={() => <ArbitraryPage appState={this.state} />}

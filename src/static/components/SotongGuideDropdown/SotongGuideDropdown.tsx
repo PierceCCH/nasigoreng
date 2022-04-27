@@ -31,12 +31,12 @@ function SotongGuideDropdown(userData) {
                 </Link>
             </DropdownItem>
             <DropdownItem>
-                <Link to="/Settling">
-                Settling Down
+                <Link to="/SettlingIn">
+                Settling In
                 </Link>
             </DropdownItem>
             <DropdownItem>
-                <Link to="/Academic">
+                <Link to="/Academics">
                 Academics
                 </Link>
             </DropdownItem>
