@@ -31,7 +31,7 @@ class SettlingInPage extends React.Component<{ appState: IAppState }, ISGState> 
     }
 
     refreshGuide(force: Boolean = false) {
-        axios.get<IGuideResponse>("/api/guide" + (force ? "?force=true" : ""))
+        axios.get<IGuideResponse>("/api/Settling" + (force ? "?force=true" : ""))
         .then(data => {
             this.setState({
                 markdown: data.data.md,

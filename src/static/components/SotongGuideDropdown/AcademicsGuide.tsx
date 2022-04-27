@@ -31,7 +31,7 @@ class AcademicsGuidePage extends React.Component<{ appState: IAppState }, ISGSta
     }
 
     refreshGuide(force: Boolean = false) {
-        axios.get<IGuideResponse>("/api/guide" + (force ? "?force=true" : ""))
+        axios.get<IGuideResponse>("/api/Academics" + (force ? "?force=true" : ""))
         .then(data => {
             this.setState({
                 markdown: data.data.md,

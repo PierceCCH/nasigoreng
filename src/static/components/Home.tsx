@@ -106,7 +106,7 @@ export const HomePage = () => {
                                 <h7>David Grueber</h7>
                                 <p>CO '24 | Mathematics, Economics</p>
                             </ExcoBlock>
-                            <ExcoBlock heading="Partnerships" icon={partnerships2}>
+                            <ExcoBlock heading="Careers" icon={partnerships2}>
                                 <h7>Jerry Ding</h7>
                                 <p>CO '23 | Mathematics, Biz Econ</p>
                             </ExcoBlock>
