@@ -31,7 +31,7 @@ class SotongGuidePage extends React.Component<{ appState: IAppState }, ISGState>
     }
 
     refreshGuide(force: Boolean = false) {
-        axios.get<IGuideResponse>("/api/Visa" + (force ? "?force=true" : ""))
+        axios.get<IGuideResponse>("/api/OnCampus" + (force ? "?force=true" : ""))
         .then(data => {
             this.setState({
                 markdown: data.data.md,

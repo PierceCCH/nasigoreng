@@ -74,10 +74,10 @@ class App extends React.Component<{}, Readonly<IAppState>> {
             <main role="main">
               {/* <GreetOrSignIn /> */}
               <Switch>
-                <Route
+                {/* <Route
                   render={() => <SotongGuidePage appState={this.state} />}
                   path="/guide"
-                />
+                /> */}
                 <Route
                   render={() => <VisaGuidePage appState={this.state} />}
                   path="/Visa"

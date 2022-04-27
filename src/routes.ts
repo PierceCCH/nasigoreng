@@ -13,7 +13,7 @@ import {
   deleteUser,
   listPCPMentors
 } from "./controllers/userController";
-import { getAcademicsGuide, getDepartureGuide, getGeneralUrl, getOncampusGuide, getSettlingGuide, getSotongGuide, getVisaGuide } from "./controllers/contentController";
+import { getAcademicsGuide, getDepartureGuide, getGeneralUrl, getOncampusGuide, getSettlingGuide, getVisaGuide } from "./controllers/contentController";
 import {
   listTestBank,
   createSignedUpload,
@@ -25,7 +25,7 @@ import Config from "./config";
 
 const apiRoutes = express.Router();
 
-apiRoutes.get("/guide", getSotongGuide);
+// apiRoutes.get("/guide", getSotongGuide);
 apiRoutes.get("/Visa", getVisaGuide);
 apiRoutes.get("/PreDeparture", getDepartureGuide);
 apiRoutes.get("/OnCampus", getOncampusGuide);
