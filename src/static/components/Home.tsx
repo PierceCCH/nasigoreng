@@ -2,6 +2,12 @@ import React, { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import coverImg from "../assets/pp.jpeg";
 import squidImg from "../assets/squid.png";
+import president from "../assets/president.jpg";
+import vicepresident from "../assets/vicepresident.jpg";
+import finance from "../assets/finance.jpg";
+import partnerships from "../assets/partnerships.jpg";
+import partnerships2 from "../assets/partnerships2.jpg";
+import socialmedia from "../assets/socialmedia.jpg";
 import oldManImg from "../assets/oldman.png";
 import phoneImg from "../assets/phone.png";
 import randy from "../assets/img.png";
@@ -36,6 +42,29 @@ export const HomePage = () => {
         </div>
     );
 
+    interface ExcoBlockProps {
+        heading: string;
+        icon: string;
+    }
+
+    const ExcoBlock = (props) => (
+        <div className="col-md-4">
+            <div className="row">
+                <div className="col-3 col-sm-12">
+                    <img className="d-iconexco mx-auto d-block" src={props.icon}></img>
+                </div>
+                <div className="col">
+                    <h6 className="pt-2">{props.heading}</h6>
+                </div>
+            </div>
+            <div className="row mt-1">
+                <h7 className="col px-4">
+                    {props.children}
+                </h7>
+            </div>
+        </div>
+    );
+
     return (
         <div className="homepage">
             <div className="row">
@@ -54,6 +83,38 @@ export const HomePage = () => {
                       <p>
                       The Singapore Students Association is a student-led organisation that aims to act as a community for Singaporean students at UCLA. We hope to serve as a familiar society that provides support and comfort for students of similar backgrounds thousands of miles away from home. The organisation also hopes to educate students not of Singaporean origin of the culture through sharing and communication between our members and the rest of the UCLA community. We welcome anyone who has lived/studied in Singapore, has Singaporean friends, or who feels connected to Singaporean culture in any way!
                       </p>
+                  <div className="divider" />
+                </div>
+                <div className="intro-text">
+                      <h4>Our Executive Committee:</h4>
+                      <div className="row mt-4 directions">
+                            <ExcoBlock heading="President" icon={president} className="introduction">
+                                <h7>Vincent Chung</h7>
+                                <p>CO '22 | Computer Science</p>
+                            </ExcoBlock>
+                            <ExcoBlock heading="Vice President/Events" icon={vicepresident}>
+                                <h7>Natalie Quah</h7>
+                                <p>CO '22/23 | Enviro Science, Conservation Bio</p>
+                            </ExcoBlock>
+                            <ExcoBlock heading="Finance" icon={finance}>
+                                <h7>Hazim Fathul Rahman</h7>
+                                <p>CO '24 | Biology</p>
+                            </ExcoBlock>
+                        </div>
+                    <div className="row mt-4 directions">
+                            <ExcoBlock heading="Partnerships" icon={partnerships} className="introduction">
+                                <h7>David Grueber</h7>
+                                <p>CO '24 | Mathematics, Economics</p>
+                            </ExcoBlock>
+                            <ExcoBlock heading="Partnerships" icon={partnerships2}>
+                                <h7>Jerry Ding</h7>
+                                <p>CO '23 | Mathematics, Biz Econ</p>
+                            </ExcoBlock>
+                            <ExcoBlock heading="Social Media" icon={socialmedia}>
+                                <h7>Matthew Ryan Teo</h7>
+                                <p>CO '25 | Computer Science and Engineering</p>
+                            </ExcoBlock>
+                        </div>
                   <div className="divider" />
                 </div>
             <div className="row mt-4 directions">
@@ -78,6 +139,7 @@ export const HomePage = () => {
                     We're always looking for sponsorship and career opportunities! You can reach us <a href="mailto:exco@uclassa.org">via email</a> or
                     simply drop any of us a message on Facebook!
                 </IntroBlock>
+                <div className="divider" />
             </div>
         </div>
     );
