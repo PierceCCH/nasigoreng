@@ -26,10 +26,9 @@ class VisaGuidePage extends React.Component<{ appState: IAppState }, ISGState> {
         this.refreshGuide = this.refreshGuide.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.refreshGuide();
     }
-
     refreshGuide(force: Boolean = false) {
         axios.get<IGuideResponse>("/api/Visa" + (force ? "?force=true" : ""))
         .then(data => {
@@ -61,7 +60,7 @@ class VisaGuidePage extends React.Component<{ appState: IAppState }, ISGState> {
                                 <a href="/auth/facebook">Sign In</a>
                             }
                             {this.state.fetchTime ? ` | Last updated: ${this.state.fetchTime.toString()} | ` : ""}
-                            {this.props.appState.userData && this.props.appState.userData.admin ? <a href="#" onClick={() => this.refreshGuide(true)}>Refresh</a> : ""}
+                            {this.props.appState.userData && this.props.appState.userData.admin ? <a href="#" onClick={() => this.refreshGuide}>Refresh</a> : ""}
                         </small>
                     </div>
                 </div>

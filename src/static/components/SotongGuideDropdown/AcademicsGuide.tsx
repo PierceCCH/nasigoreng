@@ -26,7 +26,7 @@ class AcademicsGuidePage extends React.Component<{ appState: IAppState }, ISGSta
         this.refreshGuide = this.refreshGuide.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.refreshGuide();
     }
 

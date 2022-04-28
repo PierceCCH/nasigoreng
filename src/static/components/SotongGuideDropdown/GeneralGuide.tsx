@@ -26,7 +26,7 @@ class GeneralGuidePage extends React.Component<{ appState: IAppState }, ISGState
         this.refreshGuide = this.refreshGuide.bind(this);
     }
 
-    componentWillMount() {
+    componentDidMount() {
         this.refreshGuide();
     }
 

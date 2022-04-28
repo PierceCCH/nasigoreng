@@ -5,7 +5,7 @@ import { HomePage } from "./components/Home";
 import { IUser, User } from "../models/User";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Footer } from "./components/Footer";
-import SotongGuidePage from "./components/SotongGuide";
+// import SotongGuidePage from "./components/SotongGuide";
 import VisaGuidePage from "./components/SotongGuideDropdown/VisaGuide";
 import PredeparturePage from "./components/SotongGuideDropdown/PredepartureGuide";
 import OnCampusGuidePage from "./components/SotongGuideDropdown/OnCampusGuide";
